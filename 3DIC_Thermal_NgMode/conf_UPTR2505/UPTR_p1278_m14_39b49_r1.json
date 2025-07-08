@@ -1,0 +1,134 @@
+{
+  "//COMMENT1": "Power: mW, distance: um, HTC: W/(K-m^2), Power_density: W/m^2",
+  "CORE": {
+    "TOTEMTF": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/Totem-EM/fake1278_m14_woBULK.tech",
+    "LAYERMAP": null,
+    "THERMALTF": {
+      "PATH": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/thermalTF/TF_thermal/Intel/p1278_m14_woBULK.xml",
+      "NAME": "p1278_m14_woBULK"
+    },
+    "RESOLUTION": 1,
+    "DESIGN_AREA": {
+      "SIZE": [
+        39,
+        49
+      ]
+    },
+    "METAL_DENSITY_MODEL": "TYPICAL",
+    "AMBIENT_T": 25,
+    "HTC": [
+      10000,
+      1000,
+      0
+    ],
+    "POWER_CELL0": {
+      "SIZE": [
+        1,
+        1
+      ],
+      "POWER_VAL": 0.5,
+      "OFFSET": [
+        19,
+        24
+      ]
+    }
+  },
+  "SWEEP": {
+    "UNION": {
+      "POWER_CELL0:OFFSET": [
+        [
+          18,
+          24
+        ],
+        [
+          17,
+          24
+        ],
+        [
+          16,
+          24
+        ],
+        [
+          15,
+          24
+        ],
+        [
+          14,
+          24
+        ],
+        [
+          13,
+          24
+        ],
+        [
+          12,
+          24
+        ],
+        [
+          11,
+          24
+        ],
+        [
+          10,
+          24
+        ],
+        [
+          9,
+          24
+        ],
+        [
+          8,
+          24
+        ],
+        [
+          7,
+          24
+        ],
+        [
+          6,
+          24
+        ],
+        [
+          5,
+          24
+        ],
+        [
+          4,
+          24
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          0,
+          24
+        ]
+      ]
+    }
+  },
+  "METAL_DENSITY_LIBRARY": {
+    "TYPICAL": {
+      "METAL": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0
+        }
+      },
+      "VIA": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0
+        }
+      }
+    }
+  }
+}

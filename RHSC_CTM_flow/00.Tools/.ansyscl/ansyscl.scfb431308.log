@@ -1,0 +1,116 @@
+
+		-------------------------------------------- NORMAL STARTUP 2024/03/06 23:51:24 ---------------------------------------------
+		
+		Ansys Licensing Interconnect version 2023.2.0 (20230523) for linx64.  Updated at Ansys Release 2023 R2.  Started on 2024/03/06 23:51:24 by chienchi@scfb431308:linx64 with pid 3310.
+		(C) 2023 ANSYS, Inc.  Unauthorized use, distribution, or duplication is prohibited.
+		Built Using FlexNet Publisher v11.16.4.0 build 252457 x64_lsb
+		Built Using OpenSSL 1.1.1t  7 Feb 2023
+
+		-----------------------------------------------------------------------------------------------------------------------------
+
+		Please note that entries in this debug log have the following format:
+
+TIMESTAMP              ACTION              FEATURE                    REVISION (BUILD DATE)             A/B/C/D                 W/X/Y/Z   PID:MPID:APP:USER@HOST:PLATFORM:DISPLAY                                    SOCKET:IP           
+
+		Licenses statistics:
+		--------------------
+		A is the number of licenses requested by this ACTION.
+		B is the number of licenses used by this USER.
+		C is the number of licenses used by all users.
+		D is the number of licenses available in the local license pool.
+
+		License server performance statistics:
+		--------------------------------------
+		W is the number of currently connected client applications.
+		X is the maximum number of connected client applications.
+		Y is the unique serial number of this client application.
+		Z is the number of all client applications served by this Licensing Interconnect server.
+
+		-----------------------------------------------------------------------------------------------------------------------------
+2024/03/06 23:51:24    INFO                ANSYSLI_CMD=/nfs/site/disks/ifs_itip_disk001/cchuang/Tools/RHSC_ET/2023_R2.1/licensingclient/linx64/ansyscl -acl 3283.7313 -nodaemon -log /nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/APR_Tflow/00.Tools/.ansyscl/ansyscl.scfb431308.3283.7313.log
+2024/03/06 23:51:24    INFO                ANSYSLI_INITIALIZATION_FILE=No initialization file found.
+2024/03/06 23:51:24    INFO                ANSYSLI_PRODORD_FILE=COULD NOT BE FOUND!
+2024/03/06 23:51:24    INFO                ANSYSLI_TIMEOUT_FLEXLM=15
+2024/03/06 23:51:24    INFO                Configuring ACL Core
+2024/03/06 23:51:24    INFO                ACL Core Initialized
+2024/03/06 23:51:24    INFO                ANSYSCL_PORT=34013 
+2024/03/06 23:51:24    INFO                Listen Socket Created
+2024/03/06 23:51:24    INFO                ANSYSLI_CLIENT_IDLE_TIMEOUT=0
+2024/03/06 23:51:24    INFO                ANSYSCL_FNP_PATH=1055@ansys31p.elic.intel.com:1055@ansys21p.elic.intel.com:1055@ansys23p.elic.intel.com:1055@ansys25p.elic.intel.com:1055@ansys03p.elic.intel.com
+2024/03/06 23:51:24    INFO                Ready to accept connections.
+2024/03/06 23:51:24    INFO                ANSYSLI_IP_OVERRIDE option is off.
+2024/03/06 23:51:32    CLIENT_ACCEPT                                                                                            1/1/1/1                                                                              8:127.0.0.1         
+2024/03/06 23:51:32    CLIENT_CONNECT                                                                                           1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:36    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/06 23:51:42    SPLIT_CHECKOUT      redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:42    SPLIT_CHECKOUT      redhawk_sc_token (Share)        23.2 (2023.0523)             3/-/-/-                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:42    CHECKOUT            redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:43    CHECKOUT            redhawk_sc_electrothermal        23.2 (2023.0523)            1/1/1/10                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:43    CHECKOUT            redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:53    CHECKIN             redhawk_sc_token                23.2 (2023.0523)          3/0/0/2400                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:53    CHECKIN             redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:53    CHECKIN             redhawk_sc_electrothermal        23.2 (2023.0523)            1/0/0/10                 1/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:55    CLIENT_SHUTDOWN                                                                                          0/1/1/1   3283:3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/06 23:51:55    INFO                ACL Shutdown
+2024/03/06 23:51:56    INFO                Shutting Down ACL Core
+2024/03/06 23:51:56    INFO                ACL Core Shutdown
+2024/03/06 23:51:56    INFO                License server shutdown is complete. Thank you.
+
+
+		-------------------------------------------- NORMAL STARTUP 2024/03/07 00:36:42 ---------------------------------------------
+		
+		Ansys Licensing Interconnect version 2023.2.0 (20230523) for linx64.  Updated at Ansys Release 2023 R2.  Started on 2024/03/07 00:36:42 by chienchi@scfb431308:linx64 with pid 8087.
+		(C) 2023 ANSYS, Inc.  Unauthorized use, distribution, or duplication is prohibited.
+		Built Using FlexNet Publisher v11.16.4.0 build 252457 x64_lsb
+		Built Using OpenSSL 1.1.1t  7 Feb 2023
+
+		-----------------------------------------------------------------------------------------------------------------------------
+
+		Please note that entries in this debug log have the following format:
+
+TIMESTAMP              ACTION              FEATURE                    REVISION (BUILD DATE)             A/B/C/D                 W/X/Y/Z   PID:MPID:APP:USER@HOST:PLATFORM:DISPLAY                                    SOCKET:IP           
+
+		Licenses statistics:
+		--------------------
+		A is the number of licenses requested by this ACTION.
+		B is the number of licenses used by this USER.
+		C is the number of licenses used by all users.
+		D is the number of licenses available in the local license pool.
+
+		License server performance statistics:
+		--------------------------------------
+		W is the number of currently connected client applications.
+		X is the maximum number of connected client applications.
+		Y is the unique serial number of this client application.
+		Z is the number of all client applications served by this Licensing Interconnect server.
+
+		-----------------------------------------------------------------------------------------------------------------------------
+2024/03/07 00:36:42    INFO                ANSYSLI_CMD=/nfs/site/disks/ifs_itip_disk001/cchuang/Tools/RHSC_ET/2023_R2.1/licensingclient/linx64/ansyscl -acl 8064.59007 -nodaemon -log /nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/APR_Tflow/00.Tools/.ansyscl/ansyscl.scfb431308.8064.59007.log
+2024/03/07 00:36:42    INFO                ANSYSLI_INITIALIZATION_FILE=No initialization file found.
+2024/03/07 00:36:42    INFO                ANSYSLI_PRODORD_FILE=COULD NOT BE FOUND!
+2024/03/07 00:36:42    INFO                ANSYSLI_TIMEOUT_FLEXLM=15
+2024/03/07 00:36:42    INFO                Configuring ACL Core
+2024/03/07 00:36:42    INFO                ACL Core Initialized
+2024/03/07 00:36:42    INFO                ANSYSCL_PORT=48115 
+2024/03/07 00:36:42    INFO                Listen Socket Created
+2024/03/07 00:36:42    INFO                ANSYSLI_CLIENT_IDLE_TIMEOUT=0
+2024/03/07 00:36:42    INFO                ANSYSCL_FNP_PATH=1055@ansys31p.elic.intel.com:1055@ansys21p.elic.intel.com:1055@ansys23p.elic.intel.com:1055@ansys25p.elic.intel.com:1055@ansys03p.elic.intel.com
+2024/03/07 00:36:42    INFO                Ready to accept connections.
+2024/03/07 00:36:42    INFO                ANSYSLI_IP_OVERRIDE option is off.
+2024/03/07 00:36:49    CLIENT_ACCEPT                                                                                            1/1/1/1                                                                              8:127.0.0.1         
+2024/03/07 00:36:50    CLIENT_CONNECT                                                                                           1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:36:54    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/07 00:36:59    SPLIT_CHECKOUT      redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:36:59    SPLIT_CHECKOUT      redhawk_sc_token (Share)        23.2 (2023.0523)             3/-/-/-                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:36:59    CHECKOUT            redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:00    CHECKOUT            redhawk_sc_electrothermal        23.2 (2023.0523)            1/1/1/10                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:00    CHECKOUT            redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:12    CHECKIN             redhawk_sc_token                23.2 (2023.0523)          3/0/0/2400                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:12    CHECKIN             redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:12    CHECKIN             redhawk_sc_electrothermal        23.2 (2023.0523)            1/0/0/10                 1/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:14    CLIENT_SHUTDOWN                                                                                          0/1/1/1   8064:8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64                    8:127.0.0.1         
+2024/03/07 00:37:14    INFO                ACL Shutdown
+2024/03/07 00:37:15    INFO                Shutting Down ACL Core
+2024/03/07 00:37:15    INFO                ACL Core Shutdown
+2024/03/07 00:37:15    INFO                License server shutdown is complete. Thank you.
+

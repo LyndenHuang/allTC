@@ -1,0 +1,96 @@
+# Fake Totem-EM TF #
+metal M5
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 10.000000
+}
+metal M4
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 8.000000
+}
+metal M3
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 6.000000
+}
+metal M2
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 4.000000
+}
+metal M1
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 2.000000
+}
+metal M0
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 0.000000
+}
+via VIA4
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer M5
+  LowerLayer M4
+}
+via VIA3
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer M4
+  LowerLayer M3
+}
+via VIA2
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer M3
+  LowerLayer M2
+}
+via VIA1
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer M2
+  LowerLayer M1
+}
+via VIA0
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer M1
+  LowerLayer M0
+}
+dielectric diel01
+{
+  constant 3.3
+  thickness 11.000000
+  height 0.000000
+}

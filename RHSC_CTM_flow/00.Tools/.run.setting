@@ -1,0 +1,12 @@
+ANSYSLMD_LICENSE_FILE 1055@ansys31p.elic.intel.com:1055@ansys21p.elic.intel.com:1055@ansys23p.elic.intel.com:1055@ansys25p.elic.intel.com:1055@ansys03p.elic.intel.com
+anslic init pclient 0xc7ce9e0 (pid=3283 ppid=3276 24-03-06 23:51:24 10)
+chkout redhawk_sc_token(3) (pid=3283 ppid=3276 24-03-06 23:51:42 10)
+chkout redhawk_sc_electrothermal (pid=3283 ppid=3276 24-03-06 23:51:43 10)
+chkin redhawk_sc_token (pid=3283 ppid=3276 24-03-06 23:51:53 10)
+chkin redhawk_sc_electrothermal (pid=3283 ppid=3276 24-03-06 23:51:54 10)
+ANSYSLMD_LICENSE_FILE 1055@ansys31p.elic.intel.com:1055@ansys21p.elic.intel.com:1055@ansys23p.elic.intel.com:1055@ansys25p.elic.intel.com:1055@ansys03p.elic.intel.com
+anslic init pclient 0xc7ce9e0 (pid=8064 ppid=8057 24-03-07 00:36:41 10)
+chkout redhawk_sc_token(3) (pid=8064 ppid=8057 24-03-07 00:36:59 10)
+chkout redhawk_sc_electrothermal (pid=8064 ppid=8057 24-03-07 00:37:00 10)
+chkin redhawk_sc_token (pid=8064 ppid=8057 24-03-07 00:37:12 10)
+chkin redhawk_sc_electrothermal (pid=8064 ppid=8057 24-03-07 00:37:13 10)

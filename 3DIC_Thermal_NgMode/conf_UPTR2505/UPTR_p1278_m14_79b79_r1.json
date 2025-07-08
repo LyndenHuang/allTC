@@ -1,0 +1,214 @@
+{
+  "//COMMENT1": "Power: mW, distance: um, HTC: W/(K-m^2), Power_density: W/m^2",
+  "CORE": {
+    "TOTEMTF": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/Totem-EM/fake1278_m14_woBULK.tech",
+    "LAYERMAP": null,
+    "THERMALTF": {
+      "PATH": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/thermalTF/TF_thermal/Intel/p1278_m14_woBULK.xml",
+      "NAME": "p1278_m14_woBULK"
+    },
+    "RESOLUTION": 1,
+    "DESIGN_AREA": {
+      "SIZE": [
+        79,
+        79
+      ]
+    },
+    "METAL_DENSITY_MODEL": "TYPICAL",
+    "AMBIENT_T": 25,
+    "HTC": [
+      10000,
+      1000,
+      0
+    ],
+    "POWER_CELL0": {
+      "SIZE": [
+        1,
+        1
+      ],
+      "POWER_VAL": 2,
+      "OFFSET": [
+        39,
+        39
+      ]
+    }
+  },
+  "SWEEP": {
+    "UNION": {
+      "POWER_CELL0:OFFSET": [
+        [
+          38,
+          39
+        ],
+        [
+          37,
+          39
+        ],
+        [
+          36,
+          39
+        ],
+        [
+          35,
+          39
+        ],
+        [
+          34,
+          39
+        ],
+        [
+          33,
+          39
+        ],
+        [
+          32,
+          39
+        ],
+        [
+          31,
+          39
+        ],
+        [
+          30,
+          39
+        ],
+        [
+          29,
+          39
+        ],
+        [
+          28,
+          39
+        ],
+        [
+          27,
+          39
+        ],
+        [
+          26,
+          39
+        ],
+        [
+          25,
+          39
+        ],
+        [
+          24,
+          39
+        ],
+        [
+          23,
+          39
+        ],
+        [
+          22,
+          39
+        ],
+        [
+          21,
+          39
+        ],
+        [
+          20,
+          39
+        ],
+        [
+          19,
+          39
+        ],
+        [
+          18,
+          39
+        ],
+        [
+          17,
+          39
+        ],
+        [
+          16,
+          39
+        ],
+        [
+          15,
+          39
+        ],
+        [
+          14,
+          39
+        ],
+        [
+          13,
+          39
+        ],
+        [
+          12,
+          39
+        ],
+        [
+          11,
+          39
+        ],
+        [
+          10,
+          39
+        ],
+        [
+          9,
+          39
+        ],
+        [
+          8,
+          39
+        ],
+        [
+          7,
+          39
+        ],
+        [
+          6,
+          39
+        ],
+        [
+          5,
+          39
+        ],
+        [
+          4,
+          39
+        ],
+        [
+          3,
+          39
+        ],
+        [
+          2,
+          39
+        ],
+        [
+          1,
+          39
+        ],
+        [
+          0,
+          39
+        ]
+      ]
+    }
+  },
+  "METAL_DENSITY_LIBRARY": {
+    "TYPICAL": {
+      "METAL": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0
+        }
+      },
+      "VIA": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0
+        }
+      }
+    }
+  }
+}

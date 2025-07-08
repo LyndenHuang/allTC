@@ -1,0 +1,32 @@
+2024/03/06 23:51:24    INFO                Starting Licensing Client Proxy server.
+2024/03/06 23:51:24    INFO                /nfs/site/disks/ifs_itip_disk001/cchuang/Tools/RHSC_ET/2023_R2.1/licensingclient/linx64/ansyscl -acl 3283.7313 -nodaemon -log /nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/APR_Tflow/00.Tools/.ansyscl/ansyscl.scfb431308.3283.7313.log
+2024/03/06 23:51:24    INFO                Started ANSYSLI server.
+2024/03/06 23:51:32    CLIENT_CONNECT                                                                                           1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:32    NEW_CONNECTION      Connected to Licensing Client Proxy server: 34013@127.0.0.1.
+2024/03/06 23:51:37    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/06 23:51:42    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/06 23:51:42    SPLIT_CHECKOUT      redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:42    SPLIT_CHECKOUT      redhawk_sc_token (Share)        23.2 (2023.0523)             3/-/-/-                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:42    CHECKOUT            redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:43    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/06 23:51:43    CHECKOUT            redhawk_sc_electrothermal        23.2 (2023.0523)            1/1/1/10                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:43    CHECKOUT            redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:53    CHECKIN             redhawk_sc_token                23.2 (2023.0523)          3/0/0/2400                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:54    CHECKIN             redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/06 23:51:54    CHECKIN             redhawk_sc_electrothermal        23.2 (2023.0523)            1/0/0/10                 1/1/1/1   3283:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:36:41    INFO                Starting Licensing Client Proxy server.
+2024/03/07 00:36:41    INFO                /nfs/site/disks/ifs_itip_disk001/cchuang/Tools/RHSC_ET/2023_R2.1/licensingclient/linx64/ansyscl -acl 8064.59007 -nodaemon -log /nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/APR_Tflow/00.Tools/.ansyscl/ansyscl.scfb431308.8064.59007.log
+2024/03/07 00:36:41    INFO                Started ANSYSLI server.
+2024/03/07 00:36:50    CLIENT_CONNECT                                                                                           1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:36:50    NEW_CONNECTION      Connected to Licensing Client Proxy server: 48115@127.0.0.1.
+2024/03/07 00:36:55    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/07 00:36:59    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/07 00:36:59    SPLIT_CHECKOUT      redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:36:59    SPLIT_CHECKOUT      redhawk_sc_token (Share)        23.2 (2023.0523)             3/-/-/-                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:36:59    CHECKOUT            redhawk_sc_token                23.2 (2023.0523)          3/3/3/2400                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:37:00    INFO                Unable to connect to FLEXlm path 1055@ansys03p.elic.intel.com; adding to "Unavailable FLEXlm Servers" cache.
+2024/03/07 00:37:00    CHECKOUT            redhawk_sc_electrothermal        23.2 (2023.0523)            1/1/1/10                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:37:00    CHECKOUT            redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:37:12    CHECKIN             redhawk_sc_token                23.2 (2023.0523)          3/0/0/2400                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:37:13    CHECKIN             redhawk_sc_electrothermal (Share)        23.2 (2023.0523)             1/-/-/-                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      
+2024/03/07 00:37:13    CHECKIN             redhawk_sc_electrothermal        23.2 (2023.0523)            1/0/0/10                 1/1/1/1   8064:RH:chienchi@scfb431308.zsc12.intel.com:linx64         8:10.116.22.82      

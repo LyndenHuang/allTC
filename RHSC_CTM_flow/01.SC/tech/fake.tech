@@ -1,0 +1,396 @@
+# Fake Totem-EM TF #
+metal m14
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 14.200000
+}
+metal m13
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 12.500000
+}
+metal m12
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 10.800000
+}
+metal m11
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 9.100000
+}
+metal m10
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 1.000000
+  RESISTANCE 1
+  HEIGHT 7.400000
+}
+metal m9
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.700000
+  RESISTANCE 1
+  HEIGHT 6.000000
+}
+metal m8
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.700000
+  RESISTANCE 1
+  HEIGHT 4.600000
+}
+metal m7
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.400000
+  RESISTANCE 1
+  HEIGHT 3.800000
+}
+metal m6
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.400000
+  RESISTANCE 1
+  HEIGHT 3.000000
+}
+metal m5
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.400000
+  RESISTANCE 1
+  HEIGHT 2.200000
+}
+metal m4
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.200000
+  RESISTANCE 1
+  HEIGHT 1.800000
+}
+metal m3
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.200000
+  RESISTANCE 1
+  HEIGHT 1.400000
+}
+metal m2
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.200000
+  RESISTANCE 1
+  HEIGHT 1.000000
+}
+metal m1
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.200000
+  RESISTANCE 1
+  HEIGHT 0.600000
+}
+metal m0
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.200000
+  RESISTANCE 1
+  HEIGHT 0.200000
+}
+metal POD
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.050000
+  RESISTANCE 1
+  HEIGHT 0.150000
+}
+metal NOD
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.100000
+  RESISTANCE 1
+  HEIGHT 0.000000
+}
+metal bm0
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.400000
+  RESISTANCE 1
+  HEIGHT -2.600000
+}
+metal bm1
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.500000
+  RESISTANCE 1
+  HEIGHT -3.300000
+}
+metal bm2
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.500000
+  RESISTANCE 1
+  HEIGHT -4.300000
+}
+metal bm3
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.500000
+  RESISTANCE 1
+  HEIGHT -5.000000
+}
+metal bm4
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.500000
+  RESISTANCE 1
+  HEIGHT -6.000000
+}
+metal bm5
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.500000
+  RESISTANCE 1
+  HEIGHT -7.000000
+}
+via v13
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m14
+  LowerLayer m13
+}
+via v12
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m13
+  LowerLayer m12
+}
+via v11
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m12
+  LowerLayer m11
+}
+via v10
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m11
+  LowerLayer m10
+}
+via v9
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m10
+  LowerLayer m9
+}
+via v8
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m9
+  LowerLayer m8
+}
+via v7
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m8
+  LowerLayer m7
+}
+via v6
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m7
+  LowerLayer m6
+}
+via v5
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m6
+  LowerLayer m5
+}
+via v4
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m5
+  LowerLayer m4
+}
+via v3
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m4
+  LowerLayer m3
+}
+via v2
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m3
+  LowerLayer m2
+}
+via v1
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m2
+  LowerLayer m1
+}
+via v0
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer m1
+  LowerLayer m0
+}
+via vg
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer POD
+  LowerLayer NOD
+}
+via bv0
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer bm0
+  LowerLayer bm1
+}
+via bv1
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer bm1
+  LowerLayer bm2
+}
+via bv2
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer bm2
+  LowerLayer bm3
+}
+via bv3
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer bm3
+  LowerLayer bm4
+}
+via bv4
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer bm4
+  LowerLayer bm5
+}
+dielectric diel06
+{
+  constant 4.0
+  thickness 6.100000
+  height 9.800000
+}
+dielectric diel05
+{
+  constant 4.0
+  thickness 2.400000
+  height 7.400000
+}
+dielectric diel04
+{
+  constant 3.1
+  thickness 2.800000
+  height 4.600000
+}
+dielectric diel03
+{
+  constant 3.1
+  thickness 2.400000
+  height 2.200000
+}
+dielectric diel02
+{
+  constant 3.1
+  thickness 2.000000
+  height 0.200000
+}
+dielectric diel01
+{
+  constant 3.3
+  thickness 0.200000
+  height 0.000000
+}
+dielectric Substrate
+{
+  constant 10
+  thickness 2.500000
+  height -2.500000
+}
+dielectric diel00
+{
+  constant 3.1
+  thickness 4.500000
+  height -7.000000
+}

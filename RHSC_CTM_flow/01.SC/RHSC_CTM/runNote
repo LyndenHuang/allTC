@@ -1,0 +1,5 @@
+### batch mode execution 
+redhawk_sc xxx.py
+
+### interactive mode
+redhawk_sc -i

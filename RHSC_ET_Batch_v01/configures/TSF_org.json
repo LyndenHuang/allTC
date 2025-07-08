@@ -1,0 +1,37 @@
+{
+  "//COMMENT1": "Power: mW, distance: um, HTC: W/(K-m^2)",
+  "CORE": {
+    "TOTEMTF": "C:/Users/chienchi/OneDrive - Intel Corporation/Documents/PyCodes/Thermal/RHSC_ET/DB/tech/fake1P11M_BS4Mi.tech",
+    "LAYERMAP": "C:/Users/chienchi/OneDrive - Intel Corporation/Documents/PyCodes/Thermal/RHSC_ET/DB/tech//layermap_fake_1P11M_BS4Mi.conf",
+    "THERMALTF": {
+      "PATH": "C:/Users/chienchi/OneDrive - Intel Corporation/Documents/PyCodes/Thermal/RHSC_ET/DB/thermalTF/withTSV/topTF.xml",
+      "NAME": "1P11M_wTSV_BS4Mi"
+    },
+    "MDTYPE": "TYPICAL",
+    "RESOLUTION": 2,
+    "SIZE_X": 5,
+    "SIZE_Y": 5,
+	"UNIT_POWER": 0.0004,
+    "AMBIENT_T": 25,
+    "HTC": [1000, 0, 0]
+  },
+  "SWEEP": {
+    "SPAN": ["0XY", "1X", "2X", "1Y", "2Y", "1XY", "2XY"]
+  },
+  "METAL_DENSITY_LIBRARY": {
+    "TYPICAL": {
+      "METAL": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0.6
+        }
+      },
+      "VIA": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0.1
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "//COMMENT1": "Power: mW, distance: um, HTC: W/(K-m^2), Power_density: W/m^2",
+  "CORE": {
+    "TOTEMTF": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/Totem-EM/fake1280_m16_woBULK.tech",
+    "LAYERMAP": null,
+    "THERMALTF": {
+      "PATH": "/nfs/site/disks/x5e2d_gwa_chienchi_001/TechFiles/thermalTF/TF_thermal/Intel/p1280_m16_woBULK.xml",
+      "NAME": "p1280_m16_woBULK"
+    },
+    "RESOLUTION": 20,
+    "DESIGN_AREA": {
+      "SIZE": [10, 10],
+      "POWER_SOURCE": {
+        "TYPE": "POWERMAP",
+        "PATH": "/nfs/site/disks/x5e2d_gwa_chienchi_001/Thermal/DesignData/IPF/pwr_test.csv"
+      }
+    },
+    "METAL_DENSITY_MODEL": "TYPICAL",
+    "AMBIENT_T": 25,
+    "HTC": [10000, 1000, 0]
+  },
+  "METAL_DENSITY_LIBRARY": {
+    "TYPICAL": {
+      "METAL": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 100.0
+        }
+      },
+      "VIA": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 100.0
+        }
+      }
+    }
+  }
+}
