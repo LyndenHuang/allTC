@@ -1,0 +1,62 @@
+# Fake Totem-EM TF #
+metal FSIC
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 2.370000
+  RESISTANCE 1
+  HEIGHT 0.180000
+}
+metal Xtor
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 0.180000
+  RESISTANCE 1
+  HEIGHT 0.000000
+}
+metal BSIC
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 12.870000
+  RESISTANCE 1
+  HEIGHT -12.870000
+}
+metal BLB
+{
+  MINWIDTH 1
+  MINSPACE 1
+  PITCH 1
+  THICKNESS 14.000000
+  RESISTANCE 1
+  HEIGHT -28.570000
+}
+via BLV
+{
+  Resistance 1
+  Tnom 25
+  UpperLayer BSIC
+  LowerLayer BLB
+}
+dielectric diel02
+{
+  constant 3.3
+  thickness 2.370000
+  height 0.180000
+}
+dielectric Substrate
+{
+  constant 4.4
+  thickness 0.180000
+  height 0.000000
+}
+dielectric diel01
+{
+  constant 3.3
+  thickness 28.570000
+  height -28.570000
+}

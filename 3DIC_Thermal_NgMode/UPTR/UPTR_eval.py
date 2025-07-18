@@ -7,7 +7,7 @@ import numpy as np
 
 from collections import namedtuple
 
-from parsers import RHSCETparser
+#from parsers import RHSCETparser
 
 
 UPTR_PRESETUP = {
@@ -81,15 +81,7 @@ class UPTRTable:
         self.resolution = resolution
 
         self.UPTReval = {
-            "CENTER": {
-                "Rdisk": [],
-                "Re": []
-            },
-            "MEDIUM": {
-                "Rdisk": [],
-                "Re": []
-            },
-            "PERIPHERY": {
+            "CORE": {
                 "Rdisk": [],
                 "Re": []
             }
@@ -127,6 +119,26 @@ class UPTRTable:
         return precStr.format(fval)
     
     def initUPTR(self):
+        ### aspect ratio close to 1 ###
+        if self.aspectRatio >= 0.8:
+            if self.radiusX > self.radiusY:
+                Rdisk = self.radiusX
+            else:
+                Rdisk = self.radiusY
+            
+            Rdisk, Re = self.UPTRCore(Rdisk)
+        
+        elif self.aspectRation > 0.4 and self.aspectRatio < 0.8:
+            pass
+        else:
+            pass
+        
+        self.UPTReval["CORE"]["Rdisk"] = Rdisk
+        self.UPTReval["CORE"]["Re"] = Re
+
+
+    """
+    def initUPTR(self):
         def linear_fit(x1, y1, x2, y2):
             a = (y2-y1)/(x2-x1)
             b = y1 - (a*x1)
@@ -151,6 +163,7 @@ class UPTRTable:
                 "Re": []
             }
         }
+        ### aspect ratio close to 1 ###
         if self.aspectRatio >= 0.8:
             if self.radiusX > self.radiusY:
                 Rdisk = self.radiusX
@@ -214,7 +227,6 @@ class UPTRTable:
                 UPTReval["MEDIUM"]["Rdisk"].append(x)
                 UPTReval["MEDIUM"]["Re"].append(fitval)
 
-
         elif self.aspectRation > 0.4 and self.aspectRatio < 0.8:
             pass
         else:
@@ -233,8 +245,128 @@ class UPTRTable:
         )
         print("[INFO]\nRdisk: {}\nRe: {}".format(Rdisk, Re))
 
-        self.UPTReval["CENTER"]["Rdisk"] = Rdisk
-        self.UPTReval["CENTER"]["Re"] = Re
+        self.UPTReval["CORE"]["Rdisk"] = Rdisk
+        self.UPTReval["CORE"]["Re"] = Re
+    """
+    
+
+    def UPTRCore(self, Rdisk):
+        def linear_fit(x1, y1, x2, y2):
+            a = (y2-y1)/(x2-x1)
+            b = y1 - (a*x1)
+            return lambda x:(a*x)+b
+        
+        def log_fit(x1, y1, x2, y2):
+            a = (y2-y1)/(np.log(x2)-np.log(x1))
+            b = y1 - (a*np.log(x1))
+            return lambda x:(a*np.log(x))+b
+
+        UPTReval = {
+            "CENTER": {
+                "Rdisk": [],
+                "Re": []
+            },
+            "MEDIUM": {
+                "Rdisk": [],
+                "Re": []
+            },
+            "PERIPHERY": {
+                "Rdisk": [],
+                "Re": []
+            }
+        }
+
+        Rdisk_1 = Rdisk*self.rangeFactor
+        Rdisk_2 = Rdisk*(1-self.rangeFactor)
+
+        rdisk_1_list = list(range(1, int(Rdisk_1) + 1))
+        rdisk_mid_list = list(range(int(Rdisk_1), int(Rdisk_2) + 1))
+        rdisk_2_list = list(range(int(Rdisk_2), int(Rdisk) + 1))
+
+        ### TODO: NEED to consider resolution ###
+        setupDict = UPTR_PRESETUP["BASE"]["1b1"]["CENTER"]
+        #########################################
+
+        if setupDict["ReBound"]["TYPE"] == "LINEAR":
+            ReBound = Rdisk*setupDict["ReBound"]["COEFFICIENT"][0]+setupDict["ReBound"]["COEFFICIENT"][1]
+            
+        ### determine ReG1 point value ###
+        ReG2 = ReBound*(1-setupDict["ReG2"]["FACTOR"])
+        ### fitting the values from ReG2 to ReBound ###
+        if setupDict["ReG2"]["FITTING"] == "LINEAR":
+            fitted_func = linear_fit(rdisk_2_list[0], ReG2, rdisk_2_list[-1], ReBound)
+            
+        for i, x in enumerate(rdisk_2_list):
+            if i == 0:
+                continue
+
+            fitval = fitted_func(x)
+            fitval = float(self.__F2Sprecision(fitval, prec=4))
+            UPTReval["PERIPHERY"]["Rdisk"].append(x)
+            UPTReval["PERIPHERY"]["Re"].append(fitval)
+            
+        ### fitting the values in CENTER ###
+        for x in rdisk_1_list:
+            if setupDict["ReCore"]["TYPE"] == "LOG":
+                ReCore = np.log(x)*setupDict["ReCore"]["COEFFICIENT"][0]+setupDict["ReCore"]["COEFFICIENT"][1]
+                ReCore = float(self.__F2Sprecision(ReCore, prec=4))
+
+            UPTReval["CENTER"]["Rdisk"].append(x)
+            UPTReval["CENTER"]["Re"].append(ReCore)
+
+        ### determine ReG1 point value ###
+        #ReG1 = ReG2*(1-setupDict["ReG1"]["FACTOR"])
+        ReG1 = UPTReval["CENTER"]["Re"][-1]
+            
+        ### fitting the values from ReG1 to ReG2 ###
+        if setupDict["ReG1"]["FITTING"] == "LOG":
+            fitted_func = log_fit(rdisk_mid_list[0], ReG1, rdisk_mid_list[-1], ReG2)
+            
+        for i, x in enumerate(rdisk_mid_list):
+            if i == 0:
+                continue
+
+            fitval = fitted_func(x)
+            fitval = float(self.__F2Sprecision(fitval, prec=4))
+            UPTReval["MEDIUM"]["Rdisk"].append(x)
+            UPTReval["MEDIUM"]["Re"].append(fitval)
+        
+        # Concatenate Rdisk and Re from CENTER, MEDIUM, PERIPHERY
+        Rdisk = (
+            UPTReval["CENTER"]["Rdisk"] +
+            UPTReval["MEDIUM"]["Rdisk"] +
+            UPTReval["PERIPHERY"]["Rdisk"]
+        )
+        Re = (
+            UPTReval["CENTER"]["Re"] +
+            UPTReval["MEDIUM"]["Re"] +
+            UPTReval["PERIPHERY"]["Re"]
+        )
+        print("[INFO]\nRdisk: {}\nRe: {}".format(Rdisk, Re))
+        
+        return Rdisk, Re
+
+
+    def UPTRoffCenter(self, UCloc):
+        # Calculate the maximum and minimum distance from UCloc to any corner of the design area
+        corners = [
+            (0, 0),
+            (self.designArea[0], 0),
+            (0, self.designArea[1]),
+            (self.designArea[0], self.designArea[1])
+        ]
+        distances = [math.hypot(UCloc[0] - x, UCloc[1] - y) for x, y in corners]
+        min_dist = math.floor(min(distances))
+        max_dist = math.ceil(max(distances))
+
+        #if min_dist < 3:
+        #    pass
+
+        Rdisk, Re = self.UPTRCore(max_dist)
+        
+        ReBound = Re[-1]
+
+        return Rdisk, Re, ReBound
     
     
     def deltaTMatrix(self, UCpower, UCloc):
@@ -282,8 +414,8 @@ class UPTRTable:
         ### CENTER ###
         if stageX == 1 and stageY == 1:
             print("[INFO] UC located at CENTER")
-            Rdisk = self.UPTReval["CENTER"]["Rdisk"]
-            Re = self.UPTReval["CENTER"]["Re"]
+            Rdisk = self.UPTReval["CORE"]["Rdisk"]
+            Re = self.UPTReval["CORE"]["Re"]
 
             ReBound = Re[-1]
             for i, g in enumerate(self.grid):
@@ -300,13 +432,31 @@ class UPTRTable:
         
         ### MEDIUM ###
         if stageX == 2 or stageY == 2:
-            Rdisk = self.UPTReval["MEDIUM"]["Rdisk"]
-            Re = self.UPTReval["MEDIUM"]["Re"]
+            Rdisk, Re, ReBound = self.UPTRoffCenter(UCloc)
+            for i, g in enumerate(self.grid):
+                rdisk, re = interpolateRe(UCloc, g, Rdisk, Re)
+
+                gridDeltaT = (ReBound-re)*UCpower*0.001
+                gridDeltaT = float(self.__F2Sprecision(gridDeltaT, prec=2))
+
+                if rdisk < 0.0001:
+                    gridDeltaT = ReBound*UCpower*0.001
+                
+                self.gridDeltaT[i][4] += gridDeltaT
         
         ### PERIPHERY ###
         if stageX == 3 or stageY == 3:
-            Rdisk = self.UPTReval["PERIPHERY"]["Rdisk"]
-            Re = self.UPTReval["PERIPHERY"]["Re"]
+            Rdisk, Re, ReBound = self.UPTRoffCenter(UCloc)
+            for i, g in enumerate(self.grid):
+                rdisk, re = interpolateRe(UCloc, g, Rdisk, Re)
+
+                gridDeltaT = (ReBound-re)*UCpower*0.001
+                gridDeltaT = float(self.__F2Sprecision(gridDeltaT, prec=2))
+
+                if rdisk < 0.0001:
+                    gridDeltaT = ReBound*UCpower*0.001
+                
+                self.gridDeltaT[i][4] += gridDeltaT
         
         self.totalPower += UCpower
 
@@ -331,31 +481,25 @@ class UPTRTable:
             self.gridTemp[i][4] = gridTemp
 
     
-    def plotRe(self, save_path=None, show_plot=False):
+    def plotRe(self,
+               Res, Rdisks,
+               groups, 
+               save_path=None, show_plot=False):
+        ### Res: [[Re_1], [Re_2], ...], Rdisks: [[Rdisk_1], [Rdisk_2], ...] ###
+        ### groups: [("CORE", "o", "blue"), ...]
+        
         import matplotlib.pyplot as plt
-
-        # Prepare data for each group
-        groups = [
-            ("CENTER", "o", "blue"),
-            ("MEDIUM", "s", "green"),
-            ("PERIPHERY", "^", "red"),
-        ]
 
         # Concatenate Rdisk and Re from CENTER, MEDIUM, PERIPHERY
         fig = plt.figure(figsize=(8, 5))
-        prev_x, prev_y = None, None
         for idx, (group, marker, color) in enumerate(groups):
-            Rdisk = self.UPTReval[group]["Rdisk"]
-            Re = self.UPTReval[group]["Re"]
+            Rdisk = Rdisks[idx]
+            Re = Res[idx]
+            
             if Rdisk and Re:
                 plt.plot(Rdisk, Re, marker=marker, color=color, linestyle='-', label=group)
-                # Draw link from previous group to this group
-                if prev_x is not None and prev_y is not None:
-                    plt.plot([prev_x, Rdisk[0]], [prev_y, Re[0]], color='black', linestyle='--', linewidth=1)
-                
                 # Label the group at the last point
                 plt.text(Rdisk[-1], Re[-1], f" {group}", color=color, fontsize=10, verticalalignment='bottom')
-                prev_x, prev_y = Rdisk[-1], Re[-1]
 
         plt.xlabel("Rdisk(um)")
         plt.ylabel("Re(K/W)")
@@ -809,12 +953,8 @@ def plotGridValues(resolution, gridValues, save_path=None, show_plot=False,
 
 
 
-
-
-
-
 if __name__ == "__main__":
-    """
+    
     resolution = 1
     designArea = [51, 54]
     HTCs = [1000, 100, 0]
@@ -822,10 +962,16 @@ if __name__ == "__main__":
     
     p1278 = UPTRTable(designArea, HTCs, ambT, resolution)
     p1278.initUPTR()
-    p1278.plotRe(show_plot=True)
 
-    UCpowers = [1, 2, 5]
-    UClocs = [[20, 23], [24,24], [20,19]]
+    UCpowers = [1, 2, 5, 4, 3]
+    UClocs = [[20, 23], [24,24], [20,19], [0, 20], [4, 10]]
+
+    rdisk1, re1, rebound = p1278.UPTRoffCenter(UCloc=[0, 20])
+    rdisk2, re2, rebound = p1278.UPTRoffCenter(UCloc=[4, 10])
+    Res = [p1278.UPTReval["CORE"]["Re"], re1, re2]
+    Rdisks = [p1278.UPTReval["CORE"]["Rdisk"], rdisk1, rdisk2]
+    groups = [("CORE", "o", "blue"), ("EDGE", "s", "green"), ("NEAR_EDGE", "^", "red")]
+    p1278.plotRe(Res=Res, Rdisks=Rdisks, groups=groups, show_plot=True)
 
     for i, ucp in enumerate(UCpowers):
         ucl = UClocs[i]
@@ -833,8 +979,9 @@ if __name__ == "__main__":
     
     
     p1278.plotGridTempMatrix(type="DeltaT", show_plot=True)
-    """
+    
 
+    """
     testCases = GentestCase(
         outputFolder="testcases",
         genCases=3,
@@ -844,4 +991,5 @@ if __name__ == "__main__":
         designArea=[51, 51]
     )
     #print(testCases)
+    """
     

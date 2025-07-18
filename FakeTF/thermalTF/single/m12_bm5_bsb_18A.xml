@@ -1,0 +1,66 @@
+<THERMAL_MODEL>
+	<FoundaryName>NOT TSMC</FoundaryName>
+	<Part>
+		<Name>12M_BM5_BSB_18A</Name>
+		<Type>NO_TSV</Type>
+		<Substrate>
+			<Material>Si_sub</Material>
+		</Substrate>
+		<Layer>
+			<Names>m0 m1 m2 m3 m4 m5 m6 m7 m8 m9 m10 m11 m12</Names>
+			<Material>Cu</Material>
+			<Dielectric>BEOL_diel</Dielectric>
+		</Layer>
+		<Layer>
+			<Names>v0 v1 v2 v3 v4 v5 v6 v7 v8 v9 v10 v11</Names>
+			<Material>Cu</Material>
+			<Dielectric>BEOL_diel</Dielectric>
+		</Layer>
+		<Layer>
+			<Names>bm0 bm1 bm2 bm3 bm4 bm5 bsb</Names>
+			<Material>Cu</Material>
+			<Dielectric>BEOL_diel</Dielectric>
+		</Layer>
+		<Layer>
+			<Names>bv0 bv2 bv2 bv3 bv4 bsv</Names>
+			<Material>Cu</Material>
+			<Dielectric>BEOL_diel</Dielectric>
+		</Layer>
+        <Dielectric>BEOL_diel</Dielectric>
+	</Part>
+	<MaterialLib>
+		<Material>
+			<Name>Cu</Name>
+			<Property>
+				<RefTemperature>25.000</RefTemperature>
+				<ThermalConductivity>390.000</ThermalConductivity>
+				<SpecificHeat>385.000</SpecificHeat>
+				<Density>8940.000</Density>
+			</Property>
+		</Material>
+		<Material>
+			<Name>Si_sub</Name>
+			<Property>
+				<RefTemperature>25.000</RefTemperature>
+				<ThermalConductivity>150.000</ThermalConductivity>
+				<SpecificHeat>713.000</SpecificHeat>
+				<Density>2329.000</Density>
+			</Property>
+			<Property>
+				<RefTemperature>100.000</RefTemperature>
+				<ThermalConductivity>120.000</ThermalConductivity>
+				<SpecificHeat>713.000</SpecificHeat>
+				<Density>2329.000</Density>
+			</Property>
+		</Material>
+		<Material>
+			<Name>BEOL_diel</Name>
+			<Property>
+				<RefTemperature>25.000</RefTemperature>
+				<ThermalConductivity>0.980</ThermalConductivity>
+				<SpecificHeat>730.000</SpecificHeat>
+				<Density>2650.000</Density>
+			</Property>
+		</Material>
+	</MaterialLib>
+</THERMAL_MODEL>
