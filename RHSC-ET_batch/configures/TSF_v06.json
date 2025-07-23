@@ -1,0 +1,48 @@
+{
+  "//COMMENT1": "Power: mW, distance: um, HTC: W/(K-m^2), Power_density: W/m^2",
+  "CORE": {
+    "TOTEMTF": "/nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/RUN_env/RHSC_ET_Batch_v01/DB/tech/fake1P11M_BS4Mi.tech",
+    "LAYERMAP": "/nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/RUN_env/RHSC_ET_Batch_v01/DB/tech/layermap_fake_1P11M_BS4Mi.conf",
+    "THERMALTF": {
+      "PATH": "/nfs/site/disks/ifs_itip_disk001/cchuang/Thermal/RUN_env/RHSC_ET_Batch_v01/DB/thermalTF/withTSV/topTF.xml",
+      "NAME": "1P11M_wTSV_BS4Mi"
+    },
+    "RESOLUTION": 5,
+    "DESIGN_AREA": {
+      "SIZE": [20, 20],
+      "POWER_SOURCE": {
+        "TYPE": "UNIFORM",
+        "VALUE": 0
+      }
+    },
+    "POWER_CELL": {
+      "SIZE": [4, 4],
+	  "POWER_DENSITY": 100000,
+      "OFFSET": [0, 0]
+    },
+    "METAL_DENSITY_MODEL": "TYPICAL",
+    "AMBIENT_T": 25,
+    "HTC": [100, 0, 0]
+  },
+  "SWEEP": {
+    "IID": {
+      "POWER_CELL:OFFSET": [[4,0],[8,0],[12,0],[16,0],[0,8],[4,8],[8,8],[12,8],[16,8],[0,16],[4,16],[8,16],[12,16],[16,16]]
+    }
+  },
+  "METAL_DENSITY_LIBRARY": {
+    "TYPICAL": {
+      "METAL": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0.6
+        }
+      },
+      "VIA": {
+        "0": {
+          "LAYERS": "GLOBAL",
+          "DENSITY": 0.1
+        }
+      }
+    }
+  }
+}
